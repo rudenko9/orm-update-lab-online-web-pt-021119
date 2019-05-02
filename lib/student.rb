@@ -63,6 +63,7 @@ def self.find_by_name(name)
  SELECT * FROM students WHERE name = ?LIMIT 1
  SQL
  DB[:conn].exwcute(sql,mame).map |row|
+ self.new_from_db(row)
  
  
 end 
