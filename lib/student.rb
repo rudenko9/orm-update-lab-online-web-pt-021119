@@ -60,7 +60,10 @@ end
 
 def self.find_by_name(name)
  sql = <<-SQL
- SELECT
+ SELECT name FROM students LIMIT 1
+ SQL
+ DB[:conn].exwcute(sql,mame)
+ 
   
   
 end 
