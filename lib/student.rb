@@ -56,7 +56,7 @@ def self.find_by_name(name)
  SELECT * FROM students WHERE name = ?
  SQL
 row = DB[:conn].execute(sql, name).map |row|
- new_from_db(row)[0]
+ self.new_from_db(row)[0]
 end
 
  def update
