@@ -45,7 +45,7 @@ def self.create(name, grade)
 end
 
 def self.new_from_db(array)
-    
+    self.new(array[1], array[2], array[0])
 end
 
 def self.find_by_name(name)
