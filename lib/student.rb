@@ -25,13 +25,7 @@ def self.create_table
    DB[:conn].execute(sql)
  end 
  
- def update
-   sql = <<-SQL
-   UPDATE students SET name = ?, grade = ? WHERE id = ?
-   SQL
-   DB[:conn].execute(sql, self.name, self.grade, self.id)
-   
- end 
+
  
 
 def save
@@ -65,5 +59,7 @@ def self.find_by_name(name)
  DB[:conn].execute(sql, name).map {|row| new_from_db(row)}.first 
  
 end
+
+
   
 end
