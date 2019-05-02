@@ -63,9 +63,6 @@ def self.find_by_name(name)
  SELECT name FROM students LIMIT 1
  SQL
  DB[:conn].exwcute(sql,mame)
- 
-  
-  
 end 
   
 end
